@@ -1,0 +1,50 @@
+<?php
+
+namespace App\Models\Authentication;
+
+use Illuminate\Database\Eloquent\Model;
+
+class UserData extends Model
+{
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $table = 'users_data';
+    protected $primaryKey = 'id';
+    protected $fillable = [
+        'firstname', 'middlename', 'lastname', 'institution', 'designation'
+    ];
+
+    public static $userType = [
+		0 => "System Administrator",
+		1 => "Content Manager",
+		2 => "Data Bank Manager"
+    ];
+    
+    public static $clientType = [
+		3 => "Student",  
+		4 => "Faculty Member",
+		5 => "Researcher"
+	];
+
+    public function rules()
+    {
+        return [
+			'Last Name' => 'required',
+			'First Name' => 'required',
+            'Institution' => 'required',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+			'Last Name.required' => 'Last Name is required.',
+			'First Name.required' => 'First Name is required.',
+            'Institution.required' => 'Institution is required.',
+        ];
+    }
+}
