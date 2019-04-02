@@ -15,7 +15,7 @@ class RegistrationController extends Controller
 {
     public function create()
     {
-        return view('auth.registration');
+        return view('auth.registration.registration');
     }
 
     public function store(Request $request)

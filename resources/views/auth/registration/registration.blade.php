@@ -33,7 +33,11 @@
                     @endif
 
                     <div class="form-group">
-                        {{ Form::open(array('action' => 'Authentication\RegistrationController@store', 'method' => 'post')) }}
+                        {{Form::open([
+                            'class' =>'form-horizontal',
+                            'id'=>'registrationForm',
+                            'route'=>'registration'
+                        ])}}
                         <div class="col-md-12">
                             <h3>Account Details</h3>
                             <br />
@@ -89,12 +93,7 @@
                         </div>    
                         <div class="col-md-12">
                             <br /><br />
-                            <!-- {{ Form::submit('Sign Up',[
-                                'class' => 'btn btn-lg btn-primary btn-block',
-                                'id' => 'submit'
-                            ]) }} -->
-                            {{ Form::button('<i class="glyphicon glyphicon-ok">Submit</i>', ['type' => 'submit', 'class' => 'btn btn-lg btn-primary btn-block'] )  }}
-                            <!-- <button class="btn btn-lg btn-primary btn-block" id="submit" type="button" value="Sign Up"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp; &nbsp; Sign Up</button> -->
+                            <button class="btn btn-lg btn-primary btn-block" id="register" type="button" value="Sign Up"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp; &nbsp; Sign Up</button>
                         </div>                    
                         {{ Form::close() }}
                     </div>
@@ -107,29 +106,27 @@
     </div>
 @endsection
 @section('additional-scripts')
-<script>
-	jQuery(document).ready(function() {
-        $(document).ready(function(){
-            $('#submit').on('click',function(){
+    <script>
+        jQuery(document).ready(function($) {
+            $('#register').on('click',function() {
                 swal({
-                    title: "Account Registration",
-                    text: "Your account will be created. Continue?",
-                    type: "warning",
-                    showCancelButton: true,
-                    // confirmButtonClass: "btn-danger",
-                    confirmButtonText: "Yes, submit my details",
-                    closeOnConfirm: false
+                title: "Account Creation",
+                text: "This will create your account using the credentials you have provided. Do you wish to continue?",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Yes, submit it!",
+                cancelButtonText: "No, cancel it!",
+                closeOnConfirm: false,
+                closeOnCancel: false
                 },
                 function(isConfirm){
-                    if (isConfirm){
-                        swal("Account Created!", "Your account is now created!", "success");
-                        $('#registrationForm').submit();
-                    } else {
-                        swal("Cancelled", "Your imaginary file is safe :)", "error");
-                    }
+                if (isConfirm) {
+                    $('#registrationForm').submit();
+                } else {
+                    swal("Cancelled", "Operation Cancelled", "error");
+                }
                 })
             })
-        })
-    })
-</script>
+        });
+    </script>
 @endsection
