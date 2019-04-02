@@ -2,7 +2,6 @@
     .banner {
         background-color:#021215;
         max-height:500px;
-        width:100vw;
         color: white;
     }
     .banner h1 {
@@ -26,6 +25,7 @@
         margin-top:12px;
     }
     .navbar {
+        padding:0px;
         margin-top:5px;
         margin-bottom:0;
         border-radius: 0px;
@@ -42,34 +42,33 @@
         vertical-align:inherit;
     }
     
-    
 </style>
 
-<div class="container-fluid banner">
-    <div class="row hidden-xs text-center">
-        <div class="col-md-1 text-center">
+<div class="banner no-gutters">
+    <div class="row hidden-xs text-center no-gutters">
+        <div class="col-md-1 text-center no-gutters">
             <br />
         </div>    
-        <div class="col-md-1 text-center">
+        <div class="col-md-1 text-center no-gutters">
             <img src="{{ asset('images/logo.png') }}" />
         </div>
         <div class="col-md-10 text-left">
             <div class="row">
-                <div class="col-md-12">
-                    <h3>Polytechnic University of the Philippines</h3>
-                    <h1>MycoNema Bank</h1>
+                <div class="col-md-12 no-gutters">
+                    <h3 class="no-gutters">Polytechnic University of the Philippines</h3>
+                    <h1 class="no-gutters">MycoNema Bank</h1>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12">
-            <nav class="navbar navbar-expand-lg">
-                <span class="navbar-brand visible-xs-block text-center" href="{{ url('/') }}">MYCONEMA BANK</span>
+    <div class="row no-gutters">
+        <div class="col-md-12 no-gutters">
+            <nav class="navbar navbar-expand-lg no-gutters">
+                <span class="navbar-brand visible-xs-block text-center no-gutters" href="{{ url('/') }}">MYCONEMA BANK</span>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color:#ffffff;">
                     <span class="navbar-toggler-icon" style="color:#000000;"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left:0px;">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item"><a class="nav-link" href="{{ url('/') }}"><i class="fa fa-home"></i>&nbsp; Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#"><i class="far fa-address-card"></i>&nbsp; About MycoNema &nbsp;</a></li>

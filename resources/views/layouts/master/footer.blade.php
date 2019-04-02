@@ -9,7 +9,7 @@
 </style>
 
 <div class="container-fluid">
-    <div class="row footer">
+    <div class="row footer no-gutters">
         <div class="col-md-3">
             <br />
         </div>
