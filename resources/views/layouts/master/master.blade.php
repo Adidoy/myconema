@@ -41,29 +41,14 @@
                 font-weight:bold;
                 background: #ffffff;
             }
-            .no-gutters {
-                margin:0px;
-                padding:0px;
-            }
-            .container-fluid {
-                width:100vw;
-            }
         </style>
         @yield('additional-scripts')
     </head>
     <body>
-        <div class="container-fluid no-gutters">
-            <div class="row no-gutters">
-                @include('layouts.master.banner')
-            </div>
-            <br /><br />
-            <div class="row no-gutters">
-                @yield('content')
-            </div>
-            <br /><br />
-            <div class="row no-gutters">
-                @include('layouts.master.footer')
-            </div>
-        </div>
+        @include('layouts.master.banner')
+        <br /><br />
+        @yield('content')
+        <br /><br />
+        @include('layouts.master.footer')
     </body>
 </html>

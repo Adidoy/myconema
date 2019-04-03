@@ -12,34 +12,30 @@
         height:320px;
         text-align:center;
     }
+    .content {
+        width:100%;
+    }
 </style>
 
 @section('content')
     <div class="container-fluid" id="page-body">
-        <div class="row">
+        <div class="row content">
             <div class="col-md-2">
                 <br />
             </div>
-            <div class="col-md-8" style="padding-top:20px;">
+            <div class="col-md-8">
                 <div class="row">
                     <div class="col-md-8 text-center">
                         <img src="{{ asset('images/mn-logo.png') }}" class="logo" />
                     </div>
                     <div class="col-md-4 text-center">
                         <img src="{{ asset('images/ched.png') }}" style="height:120px;"/>
-
                         <img src="{{ asset('images/dare-to.png') }}" />
-
                         <img src="{{ asset('images/k12-trans.png') }}" style="height:120px;"/>
-                    </div>                    
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
-                        <br />
-                    </div>
-                </div>                
-                <div class="row">
-                    <div class="col-md-12">
+                    <div>
                         <div><h1 style="font-family:'Roboto Regular'">MycoNema Bank</h1></div>
                         <br />
                         <p class="text-justify">
@@ -56,8 +52,8 @@
                 </div>
             </div>
             <div class="col-md-2">
-                &nbsp;
-            </div>        
-    </div>
+                <br />
+            </div>
+        </div>
     </div>
 @endsection

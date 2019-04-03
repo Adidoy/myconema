@@ -1,10 +1,30 @@
 @extends('layouts.master.master')
+
+<title>
+    Home |  {{ isset($title) ? $title.' :: '.config('app.name') : config('app.name') }}
+</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+    .logo {
+        width:700px;
+        height:320px;
+        text-align:center;
+    }
+    .content {
+        width:100%;
+    }
+</style>
+
 @section('content')
     <div class="container-fluid" id="page-body">
-        <div class="row">
-            <div class="col-md-offset-4 col-md-4">
-                <div class="panel panel-default" id="loginPanel">
-                    <div class="panel-body">
+        <div class="row content">
+            <div class="col-md-2">
+                <br />
+            </div>
+            <div class="col-md-8">
+            <div class="panel-body">
                         @include('errors.alert')
                         <form class="form-horizontal" action="{{ url('/login') }}" id="loginForm" method="post">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}" />
@@ -34,30 +54,10 @@
                             </div>
                         </form>
                     </div>
-                </div>
             </div>
-        </div>
-        <div class="row" style="margin-top:2%">
-            <div class="col-md-12">
-                <div style="float:right; padding-right:50px; padding-top:50px;">
-                    <img src="{{ asset('images/mn-logo.png') }}" style="height:7vw; width:auto;" />
-                </div>
+            <div class="col-md-2">
+                <br />
             </div>
         </div>
     </div>
-@endsection
-
-@section('scripts-include')
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $("#login-button").click(function() {
-                var $btn = $(this);
-                $btn.button('loading');
-
-                setTimeout(function () {
-                    $btn.button('reset');
-                }, 1000);
-            });
-        })
-    </script>
 @endsection
