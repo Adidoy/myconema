@@ -31,7 +31,7 @@
         border-radius: 0px;
         background:#041a1f;        
         color:#ffffff;
-        width:99vw;
+        width:100%;
     }
     .navbar a {
         color: #ffffff;
