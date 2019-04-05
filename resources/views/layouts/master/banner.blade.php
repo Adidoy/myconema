@@ -73,9 +73,10 @@
                         <span class="navbar-brand visible-xs">MycoNema Bank</span>
                         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                             <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">&emsp;&emsp;&emsp;<i class="fa fa-home"></i>&nbsp; Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">&emsp;<i class="far fa-address-card"></i>&nbsp; About &nbsp;</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">&emsp;<i class="far fa-newspaper"></i>&nbsp; Articles &nbsp;</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">&emsp;<i class="far fa-clipboard"></i>&nbsp; Registration &nbsp;</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">&emsp;<i class="far fa-address-card"></i>&nbsp; About &nbsp;</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ url('/articles') }}">&emsp;<i class="far fa-newspaper"></i>&nbsp; Articles &nbsp;</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ url('/registration') }}">&emsp;<i class="far fa-clipboard"></i>&nbsp; Registration &nbsp;</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ url('/search') }}">&emsp;<i class="fas fa-search"></i>&nbsp; Search &nbsp;</a></li>
                         </ul>
                         <ul class="navbar-nav" style="float:right;">
                             <li><a class="nav-link" href="{{ url('/sign-up') }}"><i class="fas fa-user-plus"></i>&nbsp; Sign Up &nbsp;</a></li>&emsp;

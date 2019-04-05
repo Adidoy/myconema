@@ -10,7 +10,7 @@
             </div>
             <div class="col-md-4" style="margin:0px; padding:0px;">
                 <div class="panel-body">
-                    @include('errors.alert')
+                    <!-- @include('errors.alert') -->
                     <form class="form-horizontal" action="{{ url('/login') }}" id="loginForm" method="post">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                         <div class="form-group">

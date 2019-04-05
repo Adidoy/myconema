@@ -14,11 +14,11 @@ class Routes
      */
     public static function all()
     {
-        Route::get('/login', [
+        Route::get('/login', 'Authentication\LoginController@index');
+        Route::post('/login', [
             'as' => 'login',
-            'uses'=>'Authentication\LoginController@index'
+            'uses'=>'Authentication\LoginController@login'
         ]); 
-
         Route::get('/sign-up', 'Authentication\RegistrationController@create');
         Route::post('/sign-up', [
             'as' => 'registration',
