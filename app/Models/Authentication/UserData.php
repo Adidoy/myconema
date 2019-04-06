@@ -15,20 +15,8 @@ class UserData extends Model
     protected $table = 'users_data';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'firstname', 'middlename', 'lastname', 'institution', 'designation'
+        'firstname', 'middlename', 'lastname', 'institution',
     ];
-
-    public static $userType = [
-		0 => "System Administrator",
-		1 => "Content Manager",
-		2 => "Data Bank Manager"
-    ];
-    
-    public static $clientType = [
-		3 => "Student",  
-		4 => "Faculty Member",
-		5 => "Researcher"
-	];
 
     public function rules()
     {

@@ -15,8 +15,8 @@
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^5.8",
-        "sciactive/pnotify": "^3.2",
-        "uxweb/sweet-alert": "^2.0"
+        "prologue/alerts": "^0.4.3",
+        "sciactive/pnotify": "^3.2"
     },
     "require-dev": {
         "backpack/generators": "^1.2",

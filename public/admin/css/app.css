@@ -1,0 +1,70 @@
+body {
+    font-family: 'Roboto Thin';
+    color:#000000;
+    font-size:14pt;
+    font-weight:bold;
+    background: #ffffff;
+}
+#banner {
+    background:#041a1f; 
+    max-height:7vw;
+    color: white;
+}
+#banner-header-1 {
+    font-size:1vw; 
+    font-family:'Roboto Thin';
+    margin-bottom:0px;
+    margin-top:0px;
+    padding-left:0.25vw;
+}
+#banner-header-2 {
+    font-size:4vw; 
+    font-family:'Roboto Thin';
+    margin-top:0px;
+    margin-bottom:0px;
+}
+.footer {
+    background-color:#020F12;
+    color: #ffffff;
+    text-align: center;
+}
+.center {
+    margin: 0px;
+    padding-top: 0.75vw;
+    padding-bottom:0.75vw;
+}
+.navbar {
+    background-color:#1d3034;
+    border-radius: 0px;
+    border-color: #08080800;
+}
+.navbar a {
+    color: #ffffff;
+    font-family: 'Roboto Regular';
+    font-size:12pt;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+    background-color: #09353e;
+}
+.navbar-inverse .navbar-brand {
+    color: #ffffff;
+}
+.navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
+    color: #fff;
+    background-color:#09353e;
+}
+.navbar a:hover {
+    color: #ffffff;
+    background-color:#09353e;
+}
+.navbar-right > li > a:hover {
+    color: #ffffff;
+    background-color:#09353e;
+}
+.navbar-nav > li > a:hover {
+    color: #ffffff;
+    background-color:#09353e;
+}

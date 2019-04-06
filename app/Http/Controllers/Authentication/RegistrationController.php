@@ -27,7 +27,7 @@ class RegistrationController extends Controller
         $firstName = $request->get("firstname");
         $middleName = $request->get("middlename");
         $institution = $request->get("institution");
-        $designation = $request->get("access");
+        $access = $request->get("access");
         $email = $request->get("email");
         $password = $request->get("password");
 
@@ -59,13 +59,13 @@ class RegistrationController extends Controller
                 'lastname' => $lastName,
                 'firstname' => $firstName,
                 'middlename' => $middleName,
-                'institution' => $institution,
-                'designation' => $designation
+                'institution' => $institution
             ]);
             $user = User::create([
                 'email' => $email,
                 'password' => Hash::make($password),
-                'user_id' => $userData->id
+                'user_id' => $userData->id,
+                'access' => $access
             ]);
         DB::commit();
     }

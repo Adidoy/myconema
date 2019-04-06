@@ -10,7 +10,7 @@
             </div>
             <div class="col-md-4" style="margin:0px; padding:0px;">
                 <div class="panel-body">
-                    <!-- @include('errors.alert') -->
+                    @include('errors.alert')
                     <form class="form-horizontal" action="{{ url('/login') }}" id="loginForm" method="post">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                         <div class="form-group">
@@ -49,29 +49,4 @@
                 <br />
             </div>
     </div>
-@endsection
-@section('additional-scripts')
-    <script>
-        jQuery(document).ready(function($) {
-            $('#register').on('click',function() {
-                swal({
-                title: "Account Creation",
-                text: "This will create your account using the credentials you have provided. Do you wish to continue?",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonText: "Yes, submit it!",
-                cancelButtonText: "No, cancel it!",
-                closeOnConfirm: false,
-                closeOnCancel: false
-                },
-                function(isConfirm){
-                if (isConfirm) {
-                    $('#registrationForm').submit();
-                } else {
-                    swal("Cancelled", "Operation Cancelled", "error");
-                }
-                })
-            })
-        });
-    </script>
 @endsection

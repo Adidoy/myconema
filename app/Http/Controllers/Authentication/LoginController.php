@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Authentication;
 	
 use Auth;
+use Hash;
 use Session;
 use Validator;
 use Illuminate\Http\Request;
@@ -26,7 +27,12 @@ class LoginController extends Controller
 		];
 
         if(Auth::attempt($user_information)) {
-			return view('admin.home');
+            if(Auth::user()->access <= 2) {
+                return redirect('/admin/home');
+            } else {
+                return redirect('/');    
+            }
+			
 		}
 		else {
 			return back()->withInput()->withErrors(["Invalid Credentials Submitted." ]);

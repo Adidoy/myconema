@@ -70,8 +70,8 @@
                             ]) }} 
                             <br />
                             {{ Form::label('access','Designation') }}
-                            {{ Form::select('access', App\Models\Authentication\UserData::$userType,Input::old('access'),[
-                                'class'=>'form-control' 
+                            {{ Form::select('access', App\Models\Authentication\User::$access,Input::old('access'),[
+                                'class'=>'form-control'
                             ]) }}                           
                             <br /> <br />
                         </div>

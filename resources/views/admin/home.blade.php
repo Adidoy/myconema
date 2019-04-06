@@ -1,2 +1,4 @@
+
 @extends('backpack::layout')
-<h1>Hello</h1>
+<!-- @stack('layouts.master.head') -->
+<!-- @include('layouts.master.banner') -->

@@ -19,7 +19,6 @@ class CreateUsersDataTable extends Migration
             $table->string('firstname');
             $table->string('middlename')->nullable();
             $table->string('institution');
-            $table->integer('designation')->unsigned();
             $table->timestamps();
         });
     }

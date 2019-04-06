@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
                     ->on('users')
                     ->onUpdate('cascade')
                     ->onDelete('cascade');
+            $table->integer('access');
             $table->rememberToken();
             $table->timestamps();
         });

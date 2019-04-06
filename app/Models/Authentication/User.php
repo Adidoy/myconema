@@ -10,13 +10,14 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'user_id', 'email', 'password',
+        'user_id', 'email', 'password', 'access',
     ];
 
     /**
@@ -44,6 +45,15 @@ class User extends Authenticatable
 			'Password' => 'required|min:10'
         ];
     }
+
+    public static $access = [
+		0 => "System Administrator",
+		1 => "Content Manager",
+		2 => "Data Bank Manager",
+		3 => "Student",  
+		4 => "Faculty Member",
+		5 => "Researcher"
+	];
 
     public function messages()
     {
