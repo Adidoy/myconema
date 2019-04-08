@@ -22,8 +22,11 @@ class CheckIfAdmin
      */
     private function checkIfUserIsAdmin($user)
     {
-        // return ($user->is_admin == 1);
-        return true;
+        if( $user->access <=2 ) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -52,7 +55,7 @@ class CheckIfAdmin
      */
     public function handle($request, Closure $next)
     {
-        if (backpack_auth()->guest()) {
+        if (backpack_user()->access >= 3) {
             return $this->respondToUnauthorizedRequest($request);
         }
 

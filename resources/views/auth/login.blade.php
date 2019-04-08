@@ -37,6 +37,13 @@
                                 </button>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <a href="{{ url('admin/login/') }}">
+                                        Login as Admin
+                                </a>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>

@@ -19,6 +19,7 @@ class Routes
             'as' => 'login',
             'uses'=>'Authentication\LoginController@login'
         ]); 
+        // Route::get('/admin/logout', 'Authentication\LoginController@logout');
         Route::get('/sign-up', 'Authentication\RegistrationController@create');
         Route::post('/sign-up', [
             'as' => 'registration',

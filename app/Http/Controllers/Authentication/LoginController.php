@@ -38,4 +38,10 @@ class LoginController extends Controller
 			return back()->withInput()->withErrors(["Invalid Credentials Submitted." ]);
 		}
     }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('/');
+    }
 }

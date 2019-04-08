@@ -64,4 +64,9 @@ class User extends Authenticatable
             'Password.min' => 'Minimum number of password characters is 10.',
         ];
     }
+
+    public function UserData()
+    {
+        return $this->belongsTo('App\Models\Authentication\UserData', 'user_id');
+    }
 }

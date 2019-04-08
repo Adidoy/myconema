@@ -18,6 +18,8 @@ class UserData extends Model
         'firstname', 'middlename', 'lastname', 'institution',
     ];
 
+    protected $appends = ['name'];
+
     public function rules()
     {
         return [
@@ -34,5 +36,10 @@ class UserData extends Model
 			'First Name.required' => 'First Name is required.',
             'Institution.required' => 'Institution is required.',
         ];
+    }
+
+    public function getNameAttribute()
+    {
+        return $this->firstname . ' ' . $this->lastname;
     }
 }
