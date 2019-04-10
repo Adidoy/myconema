@@ -39,7 +39,7 @@
                             'route'=>'registration'
                         ])}}
                         <div class="col-md-12">
-                            <h3>Account Details</h3>
+                            <h3><strong>Account Details</strong></h3>
                             <br />
                             {{ Form::label('firstname','First Name') }}
                             {{ Form::text('firstname',Input::old('firstname'),[
@@ -70,13 +70,14 @@
                             ]) }} 
                             <br />
                             {{ Form::label('access','Designation') }}
-                            {{ Form::select('access', App\Models\Authentication\User::$access,Input::old('access'),[
-                                'class'=>'form-control'
+                            {{ Form::select('access', App\Models\Authentication\User::$signUpAccess,Input::old('access'),[
+                                'class'=>'form-control',
+                                'size'=>'1px'
                             ]) }}                           
-                            <br /> <br />
+                            <br />
                         </div>
                         <div class="col-md-12">
-                            <h3>Account Credentials</h3>
+                            <h3><strong>Account Credentials</strong></h3>
                             <br />
                             {{ Form::label('email','Email Address') }}
                             {{ Form::text('email',Input::old('email'),[

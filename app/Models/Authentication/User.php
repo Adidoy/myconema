@@ -38,6 +38,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    protected $appends = ['name'];
+
     public function rules()
     {
         return [
@@ -45,6 +47,12 @@ class User extends Authenticatable
 			'Password' => 'required|min:10'
         ];
     }
+
+    public static $signUpAccess = [
+        3 => "Student",  
+		4 => "Faculty Member",
+		5 => "Researcher"
+    ];
 
     public static $access = [
 		0 => "System Administrator",
@@ -63,6 +71,16 @@ class User extends Authenticatable
             'Email.email' => 'Please enter a valid email address.',
             'Password.min' => 'Minimum number of password characters is 10.',
         ];
+    }
+
+    public function getAccessNameAttribute($value)
+	{
+		return User::$access[ $this->access ];
+    }
+    
+    public function getNameAttribute()
+    {
+        return $this->UserData->name;
     }
 
     public function UserData()

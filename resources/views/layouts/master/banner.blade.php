@@ -1,4 +1,16 @@
 <style>
+    @font-face {
+        font-family: 'Roboto Thin';
+        src: url('fonts/roboto/Roboto-Thin.ttf');
+    }
+    @font-face {
+        font-family: 'Roboto Regular';
+        src: url('fonts/roboto/Roboto-Regular.ttf');
+    }
+    @font-face {
+        font-family: 'Roboto Medium';
+        src: url('fonts/roboto/Roboto-Medium.ttf');
+    }
     .banner {
         background-color:#021215;
         max-height:500px;
@@ -24,27 +36,10 @@
         height:4vw; 
         width:4vw;
     }
-    .navbar {
-        padding:0px;
-        margin-top:5px;
-        margin-bottom:0;
-        border-radius: 0px;
-        background:#041a1f;        
-        color:#ffffff;
-        width:100%;
-    }
-    .navbar a {
-        color: #ffffff;
-        font-family: 'Roboto Thin';
-        font-size:11pt;
-    }
-    .navbar-nav > li > a:hover {
-        background:#fffff;
-    }
 </style>
 
 <div class="banner">
-    <div class="container-fluid hidden-xs">
+    <div class="hidden-xs">
         <div class="row align-items-center">
             <div class="col-md-1">
                 <br />

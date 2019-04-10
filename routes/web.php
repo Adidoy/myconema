@@ -14,4 +14,5 @@
 App\Http\Modules\Client\Routes::all();
 App\Http\Modules\Auth\Routes::all();
 App\Http\Modules\Admin\Routes::all();
+// App\Http\Modules\Admin\Maintenance\Taxonomy\Routes::all();
 

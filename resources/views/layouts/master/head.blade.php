@@ -35,6 +35,13 @@
             body {
                 font-family: 'Roboto Thin';
                 color:#000000;
+                font-size:12pt;
+                font-weight:bold;
+                background: #ffffff;
+            }
+            content {
+                font-family: 'Roboto Thin';
+                color:#000000;
                 font-size:14pt;
                 font-weight:bold;
                 background: #ffffff;

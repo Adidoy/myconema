@@ -9,6 +9,7 @@
 Route::group([
     'prefix'     => config('backpack.base.route_prefix', 'admin'),
     'middleware' => ['web', config('backpack.base.middleware_key', 'admin')],
-    'namespace'  => 'App\Http\Controllers\Admin',
+    'namespace'  => 'App\Http\Controllers',
 ], function () { // custom admin routes
+    CRUD::resource('maintenance/phylum', 'Admin\Maintenance\Taxonomy\PhylumCrudController');
 }); // this should be the absolute last line of this file
