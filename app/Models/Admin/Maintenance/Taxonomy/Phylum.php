@@ -5,10 +5,12 @@ namespace App\Models\Admin\Maintenance\Taxonomy;
 use Backpack\CRUD\CrudTrait;
 use App\Models\Authentication\User;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Phylum extends Model
 {
     use CrudTrait;
+    use SoftDeletes;
 
     /*
     |--------------------------------------------------------------------------
