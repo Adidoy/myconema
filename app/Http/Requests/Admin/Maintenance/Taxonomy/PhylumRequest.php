@@ -26,6 +26,7 @@ class PhylumRequest extends FormRequest
     public function rules()
     {
         return [
+            'phylumname' => 'required',
             'addedby' => 'nullable'
         ];
     }
@@ -38,7 +39,7 @@ class PhylumRequest extends FormRequest
     public function attributes()
     {
         return [
-            //
+            'phylumname' => 'Phylum Name'
         ];
     }
 
@@ -50,7 +51,7 @@ class PhylumRequest extends FormRequest
     public function messages()
     {
         return [
-            //
+            'phylumname.requred' => 'This field is required.'
         ];
     }
 }

@@ -2,6 +2,7 @@
 <li><a href="{{ backpack_url('dashboard') }}"><i class="fa fa-dashboard"></i> <span>{{ trans('backpack::base.dashboard') }}</span></a></li>
 <li class="header">Operations</li>
     <li class="treeview">
+        <li><a href='{{ backpack_url('maintenance/kingdom') }}'><span>Kingdom</span></a></li>    
         <li><a href='{{ backpack_url('maintenance/phylum') }}'><span>Phylum</span></a></li>
     </li>
 </li>
