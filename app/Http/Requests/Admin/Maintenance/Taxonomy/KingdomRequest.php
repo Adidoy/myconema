@@ -5,7 +5,7 @@ namespace App\Http\Requests\Admin\Maintenance\Taxonomy;
 use App\Http\Requests\Request;
 use Illuminate\Foundation\Http\FormRequest;
 
-class PhylumRequest extends FormRequest
+class KingdomRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,8 +26,8 @@ class PhylumRequest extends FormRequest
     public function rules()
     {
         return [
-            'phylumname' => 'required',
-            // 'addedby' => 'nullable'
+            // 'name' => 'required|min:5|max:255'
+            'kingdomname' => 'required',
         ];
     }
 
@@ -39,7 +39,8 @@ class PhylumRequest extends FormRequest
     public function attributes()
     {
         return [
-            'phylumname' => 'Phylum Name'
+            //
+            'kingdomname' => 'Kingdom Name'
         ];
     }
 
@@ -51,7 +52,8 @@ class PhylumRequest extends FormRequest
     public function messages()
     {
         return [
-            'phylumname.requred' => 'This field is required.'
+            //
+            'kingdomname.requred' => 'This field is required.'
         ];
     }
 }
