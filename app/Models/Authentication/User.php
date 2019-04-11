@@ -55,12 +55,13 @@ class User extends Authenticatable
     ];
 
     public static $access = [
-		0 => "System Administrator",
-		1 => "Content Manager",
-		2 => "Data Bank Manager",
-		3 => "Student",  
-		4 => "Faculty Member",
-		5 => "Researcher"
+        0 => 'System Administrator',
+		1 => "Administrator",
+		2 => "Content Manager",
+		3 => "Data Bank Manager",
+		4 => "Student",  
+		5 => "Faculty Member",
+		6 => "Researcher"
 	];
 
     public function messages()

@@ -13,4 +13,5 @@ Route::group([
 ], function () { // custom admin routes
     CRUD::resource('maintenance/phylum', 'Admin\Maintenance\Taxonomy\PhylumCrudController');
     CRUD::resource('maintenance/kingdom', 'Admin\Maintenance\Taxonomy\KingdomCrudController');
+    CRUD::resource('maintenance/class', 'Admin\Maintenance\Taxonomy\ClassCrudController');
 }); // this should be the absolute last line of this file
